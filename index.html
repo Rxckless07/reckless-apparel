@@ -2,17 +2,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reckless Apparel</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background-color: #0b0b0b; color: white; }
 
     header {
       padding: 20px 40px;
@@ -20,164 +19,119 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #222;
+      position: sticky; top: 0; z-index: 100;
     }
-
-    header h1 {
-      font-size: 28px;
-      letter-spacing: 2px;
-    }
-
-    nav a {
-      color: #ffffff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #ff3c3c;
-    }
+    header h1 { letter-spacing: 3px; font-size: 28px; }
+    nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #ff3c3c; }
 
     .hero {
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      padding: 80px 20px;
       text-align: center;
-      padding: 20px;
-      background: linear-gradient(to bottom, #000000, #1a1a1a);
+      background: url('images/hero.jpg') center/cover no-repeat;
     }
+    .hero h2 { font-size: 42px; margin-bottom: 15px; text-shadow: 2px 2px 8px #000; }
+    .hero p { max-width: 500px; margin: auto; color: #ccc; text-shadow: 1px 1px 6px #000; }
+    .hero a button {
+      margin-top: 25px; padding: 16px 40px; font-size: 16px;
+      background-color: #ff3c3c; border: none; color: white; font-weight: bold; border-radius: 8px;
+      cursor: pointer; transition: 0.3s;
+    }
+    .hero a button:hover { background-color: #e63232; transform: scale(1.05); }
 
-    .hero h2 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 600px;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .hero button {
-      margin-top: 30px;
-      padding: 15px 35px;
-      background-color: #ff3c3c;
-      border: none;
-      color: #ffffff;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .hero button:hover {
-      background-color: #e63232;
-    }
-
-    section {
-      padding: 80px 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h3 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    section p {
-      font-size: 17px;
-      line-height: 1.7;
-      color: #cccccc;
-    }
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    h3 { font-size: 30px; margin-bottom: 20px; }
+    section p { font-size: 16px; line-height: 1.7; color: #ccc; }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
       margin-top: 40px;
     }
-
     .product {
-      background-color: #1c1c1c;
-      padding: 20px;
+      background: #161616;
+      padding: 15px;
+      border-radius: 12px;
       text-align: center;
-      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+    .product:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+    .product img { width: 100%; border-radius: 10px; }
+    .product h4 { margin: 15px 0 5px; }
+    .product p { color: #aaa; font-size: 14px; }
+    .product button {
+      margin-top: 12px;
+      padding: 12px;
+      width: 100%;
+      background: #ff3c3c;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .product button:hover { background-color: #e63232; }
 
-    .product h4 {
-      margin-top: 15px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      border-top: 1px solid #222;
-      color: #777;
-    }
+    footer { padding: 25px; text-align: center; color: #777; border-top: 1px solid #222; }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>RECKLESS</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#shop">Shop</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>RECKLESS</h1>
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
 
-  <div class="hero">
-    <h2>Reckless Apparel</h2>
-    <p>
-      Built by four young entrepreneurs who turned one idea into a movement.
-      Reckless Apparel is about confidence, creativity, and going all in on your vision.
-    </p>
-    <button>Shop Coming Soon</button>
-  </div>
+<div class="hero">
+  <h2>Reckless Apparel</h2>
+  <p>Four young entrepreneurs. One idea. A brand built on confidence, creativity, and going all in.</p>
+  <a href="#shop"><button>Shop Now</button></a>
+</div>
 
-  <section id="about">
-    <h3>Our Story</h3>
-    <p>
-      Reckless Apparel was founded by four young entrepreneurs who shared the same idea one day:
-      create something bold, original, and meaningful. What started as a simple conversation
-      turned into a brand focused on designing and selling clothing that represents ambition,
-      risk-taking, and chasing goals without fear.
-    </p>
-  </section>
+<!-- Shop Section -->
+<section id="shop">
+  <h3>Shop the Drop</h3>
+  <div class="products">
 
-  <section id="shop">
-    <h3>Featured Drops</h3>
-    <div class="products">
-      <div class="product">
-        <h4>Reckless Hoodie</h4>
-        <p>Premium fabric. Bold attitude.</p>
-      </div>
-      <div class="product">
-        <h4>Reckless Tee</h4>
-        <p>Clean design. Everyday wear.</p>
-      </div>
-      <div class="product">
-        <h4>Reckless Hat</h4>
-        <p>Finish the look.</p>
-      </div>
+    <div class="product">
+      <img src="images/hoodie.jpg" alt="Reckless Hoodie">
+      <h4>Reckless Hoodie</h4>
+      <p>Heavyweight. Premium feel.</p>
+      <a href="https://rxckless07.github.io/reckless-apparel/" target="_blank"><button>Buy Now</button></a>
     </div>
-  </section>
 
-  <section id="contact">
-    <h3>Contact</h3>
-    <p>
-      Interested in collaborations or drops?<br>
-      Email us at: <strong>recklessapparel@email.com</strong>
-    </p>
-  </section>
+    <div class="product">
+      <img src="images/tee.jpg" alt="Reckless Tee">
+      <h4>Reckless Tee</h4>
+      <p>Clean design. Everyday essential.</p>
+      <a href="https://rxckless07.github.io/reckless-apparel/" target="_blank"><button>Buy Now</button></a>
+    </div>
 
-  <footer>
-    © 2026 Reckless Apparel. All Rights Reserved.
-  </footer>
+    <div class="product">
+      <img src="images/shorts.jpg" alt="Reckless Shorts">
+      <h4>Reckless Shorts</h4>
+      <p>Comfortable. Bold style.</p>
+      <a href="https://rxckless07.github.io/reckless-apparel/" target="_blank"><button>Buy Now</button></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <h3>Our Story</h3>
+  <p>Reckless Apparel started when four friends shared an idea to build something real. We design, create, and sell clothing that represents ambition and fearlessness.</p>
+</section>
+
+<footer>
+  © 2026 Reckless Apparel
+</footer>
 
 </body>
 </html>
