@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reckless Apparel</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff3c3c;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to bottom, #000000, #1a1a1a);
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      padding: 15px 35px;
+      background-color: #ff3c3c;
+      border: none;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero button:hover {
+      background-color: #e63232;
+    }
+
+    section {
+      padding: 80px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #cccccc;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .product {
+      background-color: #1c1c1c;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .product h4 {
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #222;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>RECKLESS</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Reckless Apparel</h2>
+    <p>
+      Built by four young entrepreneurs who turned one idea into a movement.
+      Reckless Apparel is about confidence, creativity, and going all in on your vision.
+    </p>
+    <button>Shop Coming Soon</button>
+  </div>
+
+  <section id="about">
+    <h3>Our Story</h3>
+    <p>
+      Reckless Apparel was founded by four young entrepreneurs who shared the same idea one day:
+      create something bold, original, and meaningful. What started as a simple conversation
+      turned into a brand focused on designing and selling clothing that represents ambition,
+      risk-taking, and chasing goals without fear.
+    </p>
+  </section>
+
+  <section id="shop">
+    <h3>Featured Drops</h3>
+    <div class="products">
+      <div class="product">
+        <h4>Reckless Hoodie</h4>
+        <p>Premium fabric. Bold attitude.</p>
+      </div>
+      <div class="product">
+        <h4>Reckless Tee</h4>
+        <p>Clean design. Everyday wear.</p>
+      </div>
+      <div class="product">
+        <h4>Reckless Hat</h4>
+        <p>Finish the look.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <p>
+      Interested in collaborations or drops?<br>
+      Email us at: <strong>recklessapparel@email.com</strong>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Reckless Apparel. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
